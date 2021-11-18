@@ -3,10 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jakubkaczmarski <jakubkaczmarski@studen    +#+  +:+       +#+        */
+/*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 16:08:54 by jakubkaczma       #+#    #+#             */
-/*   Updated: 2021/11/16 16:08:54 by jakubkaczma      ###   ########.fr       */
+/*   Updated: 2021/11/18 14:29:04 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+typedef struct s_list
+{
+void *content;
+struct s_list *next;
+} t_list;

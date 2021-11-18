@@ -1,4 +1,4 @@
-#TODO
+
 #include <stdio.h>
 #include <stdlib.h>
 char *ft_strjoin(char const *s1, char const *s2)
@@ -18,7 +18,9 @@ char *ft_strjoin(char const *s1, char const *s2)
         counter++;
         index++;
     }
+    // printf("Counter %i", counter);
     char *arr = malloc(sizeof(char) * counter);
+    index = 0;
     counter = 0;
     while (s1[index] != '\0')
     {
@@ -29,11 +31,12 @@ char *ft_strjoin(char const *s1, char const *s2)
     index = 0;
     while (s2[index] != '\0')
     { 
-
+     
         arr[counter] = s2[index];
         counter++;
         index++;
     }
+    arr[counter] = '\0';
     return arr;
     
 }

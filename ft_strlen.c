@@ -6,7 +6,7 @@
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 17:21:51 by jakubkaczmarski   #+#    #+#             */
-/*   Updated: 2021/11/16 20:43:51 by jkaczmar         ###   ########.fr       */
+/*   Updated: 2021/11/18 16:31:29 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ size_t ft_strlen(char *ch){
 int main(void)
 {            
     char c [] = "Siemanko";
-    
+
     printf("Alpha %zu", ft_strlen(c));
 }
