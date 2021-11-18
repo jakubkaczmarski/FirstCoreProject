@@ -1,32 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 17:21:51 by jakubkaczmarski   #+#    #+#             */
-/*   Updated: 2021/11/16 20:43:51 by jkaczmar         ###   ########.fr       */
+/*   Created: 2021/11/17 15:08:47 by jkaczmar          #+#    #+#             */
+/*   Updated: 2021/11/17 15:08:48 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
-
 #include <stdio.h>
-size_t ft_strlen(char *ch){
-    size_t counter = 0;
-    while(*ch != '\0')
+int memcmp( const void * ptr1, const void *ptr2, size_t num)
+{
+    int counter;
+    counter = 0;
+    char *c;
+    char *d;
+
+    c = (char*)ptr1;
+    d = (char*)ptr2;
+    while(counter < num)
     {
-        ch++;
+        if( *c != *d )
+        {
+            return (*c - *d);
+        }
+        c++;
+        d++;
         counter++;
     }
-    return counter;
+    return 0;
 }
 
 int main(void)
-{            
-    char c [] = "Siemanko";
-    
-    printf("Alpha %zu", ft_strlen(c));
+{
+    char arr[]  = "Siemanko";
+    char arr1[] = "Siemaneczko";
+    printf("%i", memcmp(arr, arr1, 12));
 }

@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 16:08:29 by jakubkaczma       #+#    #+#             */
-/*   Updated: 2021/11/17 10:58:23 by jkaczmar         ###   ########.fr       */
+/*   Created: 2021/11/16 16:08:46 by jakubkaczma       #+#    #+#             */
+/*   Updated: 2021/11/17 10:54:14 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-void ft_bzero(void *s, size_t n){
-    int counter = 0;
-    if(n > 0)
-    {
-       while(counter == n)
-       {
-           *(char*)s = 0;
-           counter++;
-       }
-    }
+void *ft_memcpy(void *dest, const void *src, size_t num)
+{
+	int counter;
+
+	counter = 0;
+	while(counter < num)
+	{
+		*(char*)dest = *(char*)src;
+		src++;
+		dest++;
+		counter++;
+	}
+	return dest-=counter;
 }
 
-// int main(void)
-// {            
-//     char c [] = "Siemanko";
-//     size_t w = 2;
-//     ft_bzero(&c[0], w);
-//     printf("%d")
-    // if(c[0] == '\0')
-    // {
-    //         printf("Siemanko %c",c[1]);
-    // }
-// }
+int main(void)
+{            
+	char c [] = "Siemanko";
+	char d [] = "Ducky";
+	printf("%s", c);
+	ft_memcpy(&c[0], &d[0], 5);
+	printf("%s", c);   
+}

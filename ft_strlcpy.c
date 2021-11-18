@@ -1,36 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 16:08:29 by jakubkaczma       #+#    #+#             */
-/*   Updated: 2021/11/17 10:58:23 by jkaczmar         ###   ########.fr       */
+/*   Created: 2021/11/16 17:23:37 by jkaczmar          #+#    #+#             */
+/*   Updated: 2021/11/16 21:20:15 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include <stdio.h>
-void ft_bzero(void *s, size_t n){
-    int counter = 0;
-    if(n > 0)
+
+
+size_t ft_strlcpy(char *dest, char *src, size_t size)
+{
+    int counter = size - 1;
+    while (counter > 0) 
     {
-       while(counter == n)
-       {
-           *(char*)s = 0;
-           counter++;
-       }
+        *dest++ = *src++;
+        counter--;
     }
+    return size;
+}
+int main(void)
+{
+    char a [] = {"Siemanko"};
+    char c [] = {"src"};
+    ft_strlcpy(&a[0], c, 4);
+    printf("%s\n", a);
 }
 
-// int main(void)
-// {            
-//     char c [] = "Siemanko";
-//     size_t w = 2;
-//     ft_bzero(&c[0], w);
-//     printf("%d")
-    // if(c[0] == '\0')
-    // {
-    //         printf("Siemanko %c",c[1]);
-    // }
-// }

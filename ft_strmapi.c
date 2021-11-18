@@ -1,35 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 16:08:50 by jakubkaczma       #+#    #+#             */
-/*   Updated: 2021/11/18 11:14:00 by jkaczmar         ###   ########.fr       */
+/*   Created: 2021/11/18 13:22:58 by jkaczmar          #+#    #+#             */
+/*   Updated: 2021/11/18 13:51:14 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include <stdio.h>
-
-void *ft_memset(void *ptr, int value, size_t num)
+char* ft_strmapi(char const* s, char (*f)(unsigned int, char))
 {
     int counter;
 
-    counter = 0;
-    while(counter < num)
-    {
-        *(char*)ptr = value;
-        counter++;
-        ptr++;
-    }
-    return  ptr;
-}
+    int index;
 
+    index = 0;
+    counter = 0;
+    while(s[counter] !='\0')
+    {
+        counter++;
+    }
+    char *arr = malloc(sizeof(counter * sizeof(char)));
+    index = 0;
+    while(index < counter)
+    {
+    arr[index] = f(index,s);
+    index++;
+    }
+    return arr;
+}
+char f(unsigned int a, char c){
+    c = '0';
+    return c;
+}
 int main(void)
-{            
-    char c [] = "Siemanko";
-    printf("%s", c);
-    ft_memset(&c[0], 'q', 5);
-    printf("%s", c);   
+{
+    char arr[] = "Siemanko";
+    
+    char * r = ft_strmapi(arr, f);
+    printf("s%s", r );
 }
