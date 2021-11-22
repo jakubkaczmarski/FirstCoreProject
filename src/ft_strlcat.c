@@ -6,12 +6,11 @@
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 16:53:11 by jakubkaczma       #+#    #+#             */
-/*   Updated: 2021/11/18 19:38:31 by jkaczmar         ###   ########.fr       */
+/*   Updated: 2021/11/22 14:27:23 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 size_t ft_strlcat(char *dest, char *src, size_t size)
 {
     int counter = size - 1;

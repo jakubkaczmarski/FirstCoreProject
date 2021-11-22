@@ -6,11 +6,11 @@
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 16:28:14 by jkaczmar          #+#    #+#             */
-/*   Updated: 2021/11/22 13:46:27 by jkaczmar         ###   ########.fr       */
+/*   Updated: 2021/11/22 14:27:07 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 static int strncmp(const char* s1, const char* s2, size_t n) {
     int counter;

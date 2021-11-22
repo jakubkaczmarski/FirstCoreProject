@@ -6,11 +6,11 @@
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 16:08:29 by jakubkaczma       #+#    #+#             */
-/*   Updated: 2021/11/17 10:58:23 by jkaczmar         ###   ########.fr       */
+/*   Updated: 2021/11/22 14:28:30 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 void ft_bzero(void *s, size_t n){
     int counter = 0;
     if(n > 0)

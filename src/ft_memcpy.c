@@ -6,12 +6,11 @@
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 16:08:46 by jakubkaczma       #+#    #+#             */
-/*   Updated: 2021/11/21 20:54:20 by jkaczmar         ###   ########.fr       */
+/*   Updated: 2021/11/22 14:28:03 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
+#include "libft.h"
 void *ft_memcpy(void *dest, const void *src, size_t num)
 {
 	int counter;

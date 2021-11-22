@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jakubkaczmarski <jakubkaczmarski@studen    +#+  +:+       +#+        */
+/*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 16:08:43 by jakubkaczma       #+#    #+#             */
-/*   Updated: 2021/11/16 16:08:59 by jakubkaczma      ###   ########.fr       */
+/*   Updated: 2021/11/22 14:28:16 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 int ft_isprint(int ch){
     if(ch >= ' ' && ch <= 140)
     return 1;

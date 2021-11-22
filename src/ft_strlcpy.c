@@ -6,13 +6,12 @@
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 17:23:37 by jkaczmar          #+#    #+#             */
-/*   Updated: 2021/11/16 21:20:15 by jkaczmar         ###   ########.fr       */
+/*   Updated: 2021/11/22 14:27:19 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include <stdio.h>
-
+#include "libft.h"
 
 size_t ft_strlcpy(char *dest, char *src, size_t size)
 {

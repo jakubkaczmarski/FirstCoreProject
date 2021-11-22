@@ -6,12 +6,13 @@
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 16:08:54 by jakubkaczma       #+#    #+#             */
-/*   Updated: 2021/11/22 13:51:29 by jkaczmar         ###   ########.fr       */
+/*   Updated: 2021/11/22 14:29:02 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <unistd.h>
+#include <stdio.h>
 #include <stdlib.h>
 typedef struct s_list {
     void* content;

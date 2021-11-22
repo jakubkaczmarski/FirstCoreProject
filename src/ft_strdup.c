@@ -1,5 +1,16 @@
-#include <stdio.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/22 14:27:29 by jkaczmar          #+#    #+#             */
+/*   Updated: 2021/11/22 14:27:30 by jkaczmar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 char* ft_strdup(const char* s) {
     int counter;
     counter = 0;

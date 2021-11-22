@@ -6,11 +6,11 @@
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 16:08:48 by jakubkaczma       #+#    #+#             */
-/*   Updated: 2021/11/22 13:49:14 by jkaczmar         ###   ########.fr       */
+/*   Updated: 2021/11/22 14:27:59 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 void *memmove(void *dest, const void *src, size_t n)
 {
     int arr[n];

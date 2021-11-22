@@ -6,11 +6,11 @@
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 16:08:33 by jakubkaczma       #+#    #+#             */
-/*   Updated: 2021/11/22 13:42:03 by jkaczmar         ###   ########.fr       */
+/*   Updated: 2021/11/22 14:28:25 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 int ft_isalnum(int ch){
     if(ch >= '0' && ch <= '9' || ch > 64 && ch < 91 || ch > 96 && ch < 123)
     return 1;

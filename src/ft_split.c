@@ -6,13 +6,13 @@
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 22:19:59 by jkaczmar          #+#    #+#             */
-/*   Updated: 2021/11/22 13:45:03 by jkaczmar         ###   ########.fr       */
+/*   Updated: 2021/11/22 14:27:34 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // createCharArrAndPopulateIt
 #include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 static  char* getawordfromarr(const char* str,
                       char splittythingy,

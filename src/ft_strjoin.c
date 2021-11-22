@@ -1,6 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/22 14:27:24 by jkaczmar          #+#    #+#             */
+/*   Updated: 2021/11/22 14:27:25 by jkaczmar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+
+#include "libft.h"
 char *ft_strjoin(char const *s1, char const *s2)
 {
     int counter;

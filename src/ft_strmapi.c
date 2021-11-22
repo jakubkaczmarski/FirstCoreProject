@@ -6,12 +6,11 @@
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 13:22:58 by jkaczmar          #+#    #+#             */
-/*   Updated: 2021/11/18 13:51:14 by jkaczmar         ###   ########.fr       */
+/*   Updated: 2021/11/22 14:27:12 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 char* ft_strmapi(char const* s, char (*f)(unsigned int, char))
 {
     int counter;

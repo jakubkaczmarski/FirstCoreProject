@@ -6,11 +6,11 @@
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 13:51:51 by jkaczmar          #+#    #+#             */
-/*   Updated: 2021/11/18 13:58:37 by jkaczmar         ###   ########.fr       */
+/*   Updated: 2021/11/22 14:27:27 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
     int counter;
