@@ -6,37 +6,28 @@
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 16:53:11 by jakubkaczma       #+#    #+#             */
-/*   Updated: 2021/11/22 14:27:23 by jkaczmar         ###   ########.fr       */
+/*   Updated: 2021/11/22 15:28:03 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-size_t ft_strlcat(char *dest, char *src, size_t size)
-{
-    int counter = size - 1;
-    int i;
-    i = 0;
-    while(*dest != '\0')
-    {
-        dest++;
-    }
-    while(*src != '\0')
-    {
-        i++;
-        *dest++ = *src++;
-        
-    }
-    *dest = '\0';
 
-    return i + size;
-}
-int main(void)
+size_t	ft_strlcat(char *dest, char *src, size_t size)
 {
-    char a [30] = {"Siemanko"};
-    char c [] = {"src"};
-    
-    printf("%zu", strlcat(&a[0], c, 4));
-    printf("%zu", ft_strlcat(&a[0], c, 4));
+	int	counter;
+	int	i;
 
-    printf("%s\n", a);
+	counter = size - 1;
+	i = 0;
+	while (*dest != '\0')
+	{
+		dest++;
+	}
+	while (*src != '\0')
+	{
+		i++;
+		*dest++ = *src++;
+	}
+	*dest = '\0';
+	return (i + size);
 }
