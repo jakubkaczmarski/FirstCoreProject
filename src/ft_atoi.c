@@ -6,7 +6,7 @@
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 14:28:31 by jkaczmar          #+#    #+#             */
-/*   Updated: 2021/11/22 14:58:37 by jkaczmar         ###   ########.fr       */
+/*   Updated: 2021/11/24 20:53:16 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,23 @@
 
 int	ft_atoi(const char *str)
 {
+	int	res;
+	int	counter;
 	int	negative;
-	int	num;
 
 	negative = 1;
-	num = 0;
-	while (*str == ' ' || *str == '\t')
-		str++;
-	while (*str == '+' || *str == '-')
+	counter = 0;
+	while (str[counter] == ' ' || str[counter] == '\t' || str[counter] == '\n'
+		|| str[counter] == '\v' || str[counter] == '\f' || str[counter] == '\r')
+		counter++;
+	if (str[counter] == '-' || str[counter] == '+')
 	{
-		if (*str == '-')
-			negative *= -1;
-		str++;
+		if (str[counter] == '-')
+			negative = -1;
+		counter++;
 	}
-	while (*str != '\0')
-	{
-		if (*str >= '0' && *str <= '9')
-		{
-			num += *str - '0';
-			num *= 10;
-		}
-		else
-		{
-			num /= 10;
-			break ;
-		}
-		str++;
-	}
-	return (num * negative);
+	res = 0;
+	while (str[counter] != '\0' && ft_isdigit(str[counter]))
+		res = res * 10 + (str[counter++] - '0');
+	return (res * negative);
 }

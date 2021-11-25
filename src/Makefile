@@ -6,17 +6,16 @@
 #    By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/22 13:53:09 by jkaczmar          #+#    #+#              #
-#    Updated: 2021/11/22 15:36:56 by jkaczmar         ###   ########.fr        #
+#    Updated: 2021/11/24 21:03:45 by jkaczmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			=	ft_strtrim.c
-
+SRCS			= ft_putstr_fd.c ft_strtrim.c ft_bzero.c ft_calloc.c ft_split.c ft_atoi.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_itoa.c ft_memchr.c ft_memcmp.c ft_memmove.c ft_memset.c ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c ft_split.c ft_strchr.c ft_strdup.c ft_striteri.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c ft_substr.c ft_tolower.c ft_toupper.c
 OBJS			= $(SRCS:.c=.o)
 
-CC				= gcc
-RM				= rm -f
-FLAGS			= -Wall -Wextra -Werror -I.
+# CC				= gcc
+# RM				= rm -f
+# FLAGS			= -Wall -Wextra -Werror -I.
 
 FNAME			= libft.a
 
@@ -28,3 +27,5 @@ clean:
 				$(RM)	$(OBJS)
 
 fclean:			clean
+				$(RM)	$(FNAME)				
+re: fclean all

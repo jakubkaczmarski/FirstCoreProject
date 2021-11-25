@@ -6,15 +6,15 @@
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 16:08:41 by jakubkaczma       #+#    #+#             */
-/*   Updated: 2021/11/22 15:03:55 by jkaczmar         ###   ########.fr       */
+/*   Updated: 2021/11/23 18:03:51 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_digit(int ch)
+int	ft_isdigit(int ch)
 {
-	if (ch >= '0' && ch <= '9' || ch > 64 && ch < 91 || ch > 96 && ch < 123)
+	if ((ch >= '0' && ch <= '9'))
 		return (1);
 	return (0);
 }

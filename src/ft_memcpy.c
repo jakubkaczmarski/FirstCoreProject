@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 16:08:46 by jakubkaczma       #+#    #+#             */
-/*   Updated: 2021/11/22 15:11:05 by jkaczmar         ###   ########.fr       */
+/*   Created: 2021/11/23 15:37:55 by jkaczmar          #+#    #+#             */
+/*   Updated: 2021/11/23 15:37:56 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,19 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t num)
 {
-	int	counter;
+	size_t	counter;
+	char	*a;
+	char	*a1;
 
+	a = (char *)dest;
+	a1 = (char *)src;
 	counter = 0;
+	if (!dest && !src)
+		return (NULL);
 	while (counter < num)
 	{
-		*(char *)dest = *(char *)src;
-		src++;
-		dest++;
+		a[counter] = a1[counter];
 		counter++;
 	}
-	return (dest -= counter);
+	return (a);
 }

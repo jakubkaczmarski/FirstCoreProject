@@ -6,7 +6,7 @@
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 14:27:29 by jkaczmar          #+#    #+#             */
-/*   Updated: 2021/11/22 15:25:35 by jkaczmar         ###   ########.fr       */
+/*   Updated: 2021/11/23 17:34:35 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,15 @@
 
 char	*ft_strdup(const char *s)
 {
-	int		counter;
+	size_t	len;
 	char	*arr;
 
-	counter = 0;
-	while (s[counter] != '\0')
+	len = ft_strlen((char *)s) + 1;
+	arr = malloc(len);
+	if (arr == NULL)
 	{
-		counter++;
+		return (NULL);
 	}
-	arr = malloc(counter * sizeof(char));
-	counter = 0;
-	while (s[counter] != '\0')
-	{
-		arr[counter] = s[counter];
-		counter++;
-	}
+	ft_strlcpy(arr, (char *)s, len);
 	return (arr);
 }

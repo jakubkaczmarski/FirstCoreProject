@@ -6,26 +6,28 @@
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 14:27:08 by jkaczmar          #+#    #+#             */
-/*   Updated: 2021/11/22 15:31:06 by jkaczmar         ###   ########.fr       */
+/*   Updated: 2021/11/24 17:02:54 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int	counter;
+	size_t			counter;
+	unsigned char	*magic;
+	unsigned char	*helpme;
 
 	counter = 0;
-	while (*s1 && *s2 && counter < n)
+	magic = (unsigned char *)s1;
+	helpme = (unsigned char *)s2;
+	while ((magic[counter] != '\0' || helpme[counter] != '\0') && counter < n)
 	{
-		if (*s1 != *s2)
+		if (magic[counter] != helpme[counter])
 		{
-			return (*s1 - *s2);
+			return (magic[counter] - helpme[counter]);
 		}
 		counter++;
-		s1++;
-		s2++;
 	}
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 14:26:59 by jkaczmar          #+#    #+#             */
-/*   Updated: 2021/11/22 15:34:39 by jkaczmar         ###   ########.fr       */
+/*   Updated: 2021/11/22 18:55:55 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		start++;
 		counter++;
 	}
+	arr[counter] = '\0';
 	return (arr);
 }

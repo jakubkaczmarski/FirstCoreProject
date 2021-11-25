@@ -6,7 +6,7 @@
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 16:28:14 by jkaczmar          #+#    #+#             */
-/*   Updated: 2021/11/22 15:31:49 by jkaczmar         ###   ########.fr       */
+/*   Updated: 2021/11/24 18:08:34 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,26 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int		i;
-	int		j;
-	int		start;
-	char	*arr;
+	size_t	size_oflittle;
+	size_t	size_ofbig;
+	size_t	counter;
+	char	*str;
+	char	*substr;
 
-	j = 0;
-	i = 0;
-	while (big[i] != '\0')
+	counter = 0;
+	size_oflittle = ft_strlen((char *)little);
+	size_ofbig = ft_strlen((char *)big);
+	str = (char *)big;
+	substr = (char *)little;
+	if (size_oflittle == 0)
+		return (str);
+	while ((counter + size_oflittle < len)
+		&& (size_oflittle + counter <= size_ofbig))
 	{
-		j = 0;
-		if (little[j] == big[i])
-		{
-			start = i;
-			while (little[j] == big[i])
-			{
-				i++;
-				j++;
-				if (little[j] == '\0')
-				{
-					arr = &big[start];
-					return (arr);
-				}
-			}
-		}
-		i++;
+		if (str[counter] == substr[0])
+			if (ft_strncmp(str + counter, little, size_oflittle) == 0)
+				return (str + counter);
+		counter++;
 	}
 	return (NULL);
 }

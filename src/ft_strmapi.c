@@ -6,7 +6,7 @@
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 13:22:58 by jkaczmar          #+#    #+#             */
-/*   Updated: 2021/11/22 15:30:35 by jkaczmar         ###   ########.fr       */
+/*   Updated: 2021/11/24 17:11:19 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int		counter;
-	int		index;
+	size_t		counter;
+	size_t		index;
 	char	*arr;
 
 	index = 0;

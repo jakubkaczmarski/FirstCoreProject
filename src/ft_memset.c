@@ -6,7 +6,7 @@
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 16:08:50 by jakubkaczma       #+#    #+#             */
-/*   Updated: 2021/11/22 15:16:25 by jkaczmar         ###   ########.fr       */
+/*   Updated: 2021/11/22 20:30:38 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *ptr, int value, size_t num)
 {
-	int	counter;
+	size_t	counter;
 
 	counter = 0;
 	while (counter < num)
@@ -23,5 +23,5 @@ void	*ft_memset(void *ptr, int value, size_t num)
 		counter++;
 		ptr++;
 	}
-	return (ptr);
+	return (ptr -= counter);
 }

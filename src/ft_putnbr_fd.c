@@ -6,7 +6,7 @@
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 14:27:38 by jkaczmar          #+#    #+#             */
-/*   Updated: 2021/11/22 15:18:55 by jkaczmar         ###   ########.fr       */
+/*   Updated: 2021/11/24 21:12:05 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,23 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	*arr;
-	int		counter;
-
-	arr = ft_itoa(n);
-	counter = 0;
-	while (arr[counter] != '\0')
+	if (n == -2147483648)
 	{
-		counter++;
+		ft_putstr_fd("-2147483648", fd);
+		return ;
 	}
-	write(fd, arr, counter);
+	if (n < 0)
+	{
+		n = -n;
+		write(fd, "-", 1);
+	}
+	if (n < 10)
+	{
+		ft_putchar_fd(n + '0', fd);
+	}
+	else
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
+	}
 }

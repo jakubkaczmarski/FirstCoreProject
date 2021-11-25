@@ -6,7 +6,7 @@
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 16:08:43 by jakubkaczma       #+#    #+#             */
-/*   Updated: 2021/11/22 15:05:18 by jkaczmar         ###   ########.fr       */
+/*   Updated: 2021/11/23 18:05:19 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isprint(int ch)
 {
-	if (ch >= ' ' && ch <= 140)
+	if ((ch >= ' ' && ch <= 126))
 		return (1);
 	return (0);
 }

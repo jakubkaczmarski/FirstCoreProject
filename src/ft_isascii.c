@@ -6,7 +6,7 @@
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 16:08:38 by jakubkaczma       #+#    #+#             */
-/*   Updated: 2021/11/22 15:03:11 by jkaczmar         ###   ########.fr       */
+/*   Updated: 2021/11/23 18:01:43 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isascii(int ch)
 {
-	if (ch >= 0 && ch <= 127)
+	if ((ch >= 0 && ch <= 127))
 		return (1);
 	return (0);
 }
