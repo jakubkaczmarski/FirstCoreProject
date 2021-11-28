@@ -6,7 +6,7 @@
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 14:27:24 by jkaczmar          #+#    #+#             */
-/*   Updated: 2021/11/22 15:27:25 by jkaczmar         ###   ########.fr       */
+/*   Updated: 2021/11/27 14:45:01 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		counter;
 	int		index;
 	char	*arr;
-
+	
+	if(!s1 || !s2)
+		return NULL;
 	counter = 0;
 	index = 0;
 	while (s1[index] != '\0')
@@ -31,7 +33,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		counter++;
 		index++;
 	}
-	arr = malloc(sizeof(char) * counter);
+	arr = malloc(sizeof(char) * (counter + 1));
+	if(!arr)
+		return NULL;
 	index = 0;
 	counter = 0;
 	while (s1[index] != '\0')

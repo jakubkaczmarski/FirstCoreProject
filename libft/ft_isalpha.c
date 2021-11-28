@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 16:08:33 by jakubkaczma       #+#    #+#             */
-/*   Updated: 2021/11/23 18:06:28 by jkaczmar         ###   ########.fr       */
+/*   Created: 2021/11/16 16:08:35 by jakubkaczma       #+#    #+#             */
+/*   Updated: 2021/11/25 15:39:05 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int ch)
+int	ft_isalpha(int ch)
 {
-	if ((ch >= '0' && ch <= '9')
-		|| (ch > 64 && ch < 91)
-		|| (ch > 96 && ch < 123))
+	if ((ch > 64 && ch < 91) || (ch > 96 && ch < 123))
 		return (1);
 	return (0);
 }

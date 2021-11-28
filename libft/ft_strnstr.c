@@ -6,7 +6,7 @@
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 16:28:14 by jkaczmar          #+#    #+#             */
-/*   Updated: 2021/11/24 18:08:34 by jkaczmar         ###   ########.fr       */
+/*   Updated: 2021/11/27 16:15:09 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,10 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_ofbig = ft_strlen((char *)big);
 	str = (char *)big;
 	substr = (char *)little;
-	if (size_oflittle == 0)
-		return (str);
+	if(*little == '\0')
+		return (char*)(big);
+	if (size_oflittle == 0 || len == 0 || !*big || !*little)
+		return (NULL);
 	while ((counter + size_oflittle < len)
 		&& (size_oflittle + counter <= size_ofbig))
 	{

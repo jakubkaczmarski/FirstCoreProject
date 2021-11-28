@@ -1,48 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/22 14:28:13 by jkaczmar          #+#    #+#             */
-/*   Updated: 2021/11/22 15:06:40 by jkaczmar         ###   ########.fr       */
+/*   Created: 2021/11/17 11:55:57 by jkaczmar          #+#    #+#             */
+/*   Updated: 2021/11/25 14:53:11 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char	res;
-	int		counter;
-	int		negative;
-	int		num;
-	char	*arr;
+	size_t	counter;
+	unsigned char	*thingy;
 
-	negative = 0;
 	counter = 0;
-	num = n;
-	if (n < 0)
+	thingy = (unsigned char *)s;
+	while (counter < n)
 	{
-		negative = 1;
-		n *= -1;
+		if (*thingy == (unsigned char)c)
+			return (thingy);
+		thingy++;
 		counter++;
 	}
-	while (num != 0)
-	{
-		counter++;
-		num = num / 10;
-	}
-	arr = malloc(sizeof(char) * counter);
-	if (negative == 1)
-		arr[0] = '-';
-	counter--;
-	while (n != 0)
-	{
-		arr[counter] = n % 10 + '0';
-		counter--;
-		n /= 10;
-	}
-	return (arr);
+	return (0);
 }

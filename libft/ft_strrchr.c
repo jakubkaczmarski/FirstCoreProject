@@ -1,25 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/18 13:51:51 by jkaczmar          #+#    #+#             */
-/*   Updated: 2021/11/22 15:26:39 by jkaczmar         ###   ########.fr       */
+/*   Created: 2021/11/22 14:27:04 by jkaczmar          #+#    #+#             */
+/*   Updated: 2021/11/25 16:57:00 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+char	*ft_strrchr(const char *s, int c)
 {
-	int	counter;
-
-	counter = 0;
-	while (s[counter] != '\0')
+	char	*ret;
+	ret = 0;
+	// if(c > 128)
+	// {
+	// 	return (char*)s;
+	// }
+	if (*s == '\0' && c == '\0')
 	{
-		f(counter, &s[counter]);
-		counter++;
+		ret = (char *)s;
+		return (ret);
 	}
+	else if (c == '\0')
+	{
+		while (*s != '\0')
+			s++;
+		ret = (char *)s;
+		return (ret);
+	}
+	while (*s)
+	{
+		if (c == *s)
+			ret = (char *)s;
+		s++;
+	}
+	if (!ret)
+		return (NULL);
+	return (ret);
 }

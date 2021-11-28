@@ -1,35 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/18 13:22:58 by jkaczmar          #+#    #+#             */
-/*   Updated: 2021/11/24 17:11:19 by jkaczmar         ###   ########.fr       */
+/*   Created: 2021/11/16 16:08:48 by jakubkaczma       #+#    #+#             */
+/*   Updated: 2021/11/28 12:27:52 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t		counter;
-	size_t		index;
-	char	*arr;
+	size_t	i;
 
-	index = 0;
-	counter = 0;
-	while (s[counter] != '\0')
+	i = 0;
+	unsigned char* ptr = dest;
+	const unsigned char* ptr1 = src;
+	if(!dest || !src)
+		return NULL;
+	if(dest > src)
 	{
-		counter++;
-	}
-	arr = malloc(sizeof(counter * sizeof(char)));
-	index = 0;
-	while (index < counter)
+		while(0 < n--)
+			ptr[n] = ptr1[n];
+	}else
 	{
-		arr[index] = f(index, s);
-		index++;
+			while(n > i)
+			{
+				ptr[i] = ptr1[i];
+				i++;
+			}
 	}
-	return (arr);
+	return (dest);
 }

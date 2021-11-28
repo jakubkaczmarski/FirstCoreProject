@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 16:08:48 by jakubkaczma       #+#    #+#             */
-/*   Updated: 2021/11/23 16:48:09 by jkaczmar         ###   ########.fr       */
+/*   Created: 2021/11/22 14:28:26 by jkaczmar          #+#    #+#             */
+/*   Updated: 2021/11/27 22:48:16 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t			counter;
-	unsigned char	*arr;
+	int    *ptr;
 
-	counter = 0;
-	arr = malloc(sizeof(char) * n);
-	while (counter < n)
-	{
-		arr[counter] = *(char *)src;
-		src++;
-		counter++;
-	}
-	counter = 0;
-	while (counter < n)
-	{
-		*(char *)dest = arr[counter];
-		dest++;
-		counter++;
-	}
-	return (dest -= counter);
+    if (size == 0)
+        return (ptr = malloc(nmemb * size));
+    if (nmemb == 0)
+        return (NULL);
+    ptr = malloc(nmemb * size);
+    if (ptr == NULL)
+        return (NULL);
+    ft_bzero(ptr, nmemb * size);
+    return (ptr);
 }

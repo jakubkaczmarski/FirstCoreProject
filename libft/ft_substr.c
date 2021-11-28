@@ -1,25 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/22 14:27:36 by jkaczmar          #+#    #+#             */
-/*   Updated: 2021/11/22 15:19:29 by jkaczmar         ###   ########.fr       */
+/*   Created: 2021/11/22 14:26:59 by jkaczmar          #+#    #+#             */
+/*   Updated: 2021/11/28 19:14:18 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int	counter;
+	size_t		end;
+	size_t		counter;
+	char	*arr;
 
+	end = start + len;
 	counter = 0;
-	while (s[counter] != '\0')
+	arr = malloc(sizeof(char) * (len + 1));
+	if(start > len)
+		return ft_strdup("");
+	if (!arr || !s )
+		return (NULL);
+	while (start < end)
 	{
+		arr[counter] = s[start];
+		start++;
 		counter++;
 	}
-	write(fd, s, counter);
+	arr[counter] = '\0';
+	return (arr);
 }

@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/17 11:55:57 by jkaczmar          #+#    #+#             */
-/*   Updated: 2021/11/22 21:02:31 by jkaczmar         ###   ########.fr       */
+/*   Created: 2021/11/22 14:27:31 by jkaczmar          #+#    #+#             */
+/*   Updated: 2021/11/27 14:14:28 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t	counter;
-	char	*thingy;
-
-	counter = 0;
-	thingy = (char *)s;
-	while (counter < n)
+	if(c < 0 || c > 255)
+		return ((char*)s);
+	if ((unsigned char)*s == '\0' && (unsigned char)c == '\0')
+		return ((char *)s);
+	else if ((unsigned char)c == '\0')
 	{
-		if (*thingy == c)
-			return (thingy);
-		thingy++;
-		counter++;
+		while ((unsigned char)*s != '\0')
+			s++;
+		return ((char *)s);
+	}
+	while ((unsigned char)*s)
+	{
+		if ((unsigned char)*s == '\0')
+			break ;
+		if ((unsigned char)c == (unsigned char)*s)
+			return ((char *)s);
+		s++;
 	}
 	return (0);
 }

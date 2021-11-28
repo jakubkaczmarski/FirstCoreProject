@@ -6,7 +6,7 @@
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 16:08:54 by jakubkaczma       #+#    #+#             */
-/*   Updated: 2021/11/24 21:05:53 by jkaczmar         ###   ########.fr       */
+/*   Updated: 2021/11/28 17:57:09 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int					ft_atoi(const char *str);
 void				ft_bzero(void *s, size_t n);
 void				*ft_calloc(size_t nmemb, size_t size);
 int					ft_isalnum(int ch);
-int					ft_isalpha(char ch);
+int					ft_isalpha(int ch);
 int					ft_isascii(int ch);
 int					ft_isdigit(int ch);
 int					ft_isprint(int ch);
@@ -40,7 +40,9 @@ char				*ft_itoa(int n);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 char				**ft_split(const char *str, char splittythingy);
+char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
+char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_strdup(const char *s);
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strjoin(char const *s1, char const *s2);
@@ -55,3 +57,6 @@ size_t				ft_strlen(char *ch);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
+//BONUS
+void 				ft_lstadd_front(t_list **lst, t_list *new);
+t_list				*ft_lstnew(void *content);
