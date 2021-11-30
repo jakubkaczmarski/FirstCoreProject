@@ -6,7 +6,7 @@
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 14:27:31 by jkaczmar          #+#    #+#             */
-/*   Updated: 2021/11/27 14:14:28 by jkaczmar         ###   ########.fr       */
+/*   Updated: 2021/11/29 15:53:54 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	if(c < 0 || c > 255)
-		return ((char*)s);
+	if (c < 0 || c > 255)
+		return ((char *)s);
 	if ((unsigned char)*s == '\0' && (unsigned char)c == '\0')
 		return ((char *)s);
 	else if ((unsigned char)c == '\0')

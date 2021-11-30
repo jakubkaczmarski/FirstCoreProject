@@ -6,13 +6,13 @@
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 14:28:31 by jkaczmar          #+#    #+#             */
-/*   Updated: 2021/11/28 11:45:58 by jkaczmar         ###   ########.fr       */
+/*   Updated: 2021/11/29 16:00:35 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int					ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int	res;
 	int	counter;

@@ -6,7 +6,7 @@
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 14:27:53 by jkaczmar          #+#    #+#             */
-/*   Updated: 2021/11/25 15:52:22 by jkaczmar         ###   ########.fr       */
+/*   Updated: 2021/11/29 16:50:51 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putendl_fd(char *s, int fd)
 	int	counter;
 
 	counter = 0;
-	if(s == NULL)
+	if (s == NULL)
 		return ;
 	while (s[counter] != '\0')
 	{

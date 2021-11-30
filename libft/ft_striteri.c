@@ -6,7 +6,7 @@
 /*   By: jkaczmar <jkaczmar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 13:51:51 by jkaczmar          #+#    #+#             */
-/*   Updated: 2021/11/27 14:40:17 by jkaczmar         ###   ########.fr       */
+/*   Updated: 2021/11/29 16:51:47 by jkaczmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	int	counter;
 
 	counter = 0;
-	if(s == NULL)
+	if (s == NULL)
 		return ;
 	while (s[counter] != '\0')
 	{
